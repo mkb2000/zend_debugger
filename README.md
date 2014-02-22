@@ -1,10 +1,10 @@
-After updating to OSX 10.9, the default php shipped with OSX is updated to 5.4. Zend.com doesn't publicly provide a zend debugger for php 5.4.x. The files used in this article are shipped with zend server. Here is the steps to instal zend debugger on Mac OSX 10.9 64bit.
+After updating to OSX 10.9, the default php shipped with OSX is updated to 5.4. Zend.com doesn't publicly provide a zend debugger for php 5.4.x.Here is the steps to instal zend debugger on Mac OSX 10.9 64bit. The files used here are offically shipped with zend server.
 
-Step 1. Download ZendDebugger.so (download link) from https://github.com/mkb2000/zend_debugger.
+Step 1. Download ZendDebugger.so from https://github.com/mkb2000/zend_debugger.
 
 Step 2. Put ZendDebugger.so to somewhere like /Library/WebServer/Documents/zend_debugger.
 
-Step 3. Modify php.ini. The default configuration file used by Mac OS is at /private/etc/php.ini. Admin permission is required to modify this file. So go to /Applications/Utilities and open Terminal. Enter sudo nano /private/etc/php.ini. Jump to the end of this file and add 
+Step 3. Modify php.ini. The default configuration file used by Mac OS is /private/etc/php.ini. Admin permission is required to modify this file. So go /Applications/Utilities and open Terminal. Enter "sudo nano /private/etc/php.ini". Jump to the end of this file and add:
 [zend_debugger]
 zend_extension="/the/path/to/the/folder/you/made/in/step2/ZendDebugger.so"
 zend_debugger.allow_hosts=127.0.0.1, localhost
